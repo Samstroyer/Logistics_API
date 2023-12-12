@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "watch": "bun --watch index.ts"
+    "watch": "bun --watch ./src/app/index.ts",
+    "generate_test_data": "bun run ./src/generator/generate.js"
   },
   "devDependencies": {
     "bun-types": "latest"
@@ -12,6 +13,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@elysiajs/html": "^0.7.3",
+    "@elysiajs/static": "^0.7.1",
     "elysia": "^0.7.29",
     "mongoose": "^8.0.1"
   }
