@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Umay Under Desk Treadmill",
+    "id": 0,
+    "shelf": "",
+    "weight": 16,
+    "price": 782
+  },
+  {
+    "name": "Earth Rated Dog Poop Bags",
+    "id": 1,
+    "shelf": "",
+    "weight": 3,
+    "price": 748
+  },
+  {
+    "name": "J Jimoo Mulberry Silk Pillowcase",
+    "id": 2,
+    "shelf": "",
+    "weight": 11,
+    "price": 305
+  },
+  {
+    "name": "Bedsure Sherpa Fleece Throw Blanket",
+    "id": 3,
+    "shelf": "",
+    "weight": 19,
+    "price": 483
+  },
+  {
+    "name": "Laneige Lip Sleeping Mask",
+    "id": 4,
+    "shelf": "",
+    "weight": 16,
+    "price": 777
+  },
+  {
+    "name": "DEWALT 20V Max Cordless Drill / Driver Kit",
+    "id": 5,
+    "shelf": "",
+    "weight": 14,
+    "price": 555
+  },
+  {
+    "name": "Apple AirPods (2nd Generation)",
+    "id": 6,
+    "shelf": "",
+    "weight": 11,
+    "price": 830
+  },
+  {
+    "name": "DearHouse 2 Pack Fall Garland Maple Leaf",
+    "id": 7,
+    "shelf": "",
+    "weight": 2,
+    "price": 836
+  },
+  {
+    "name": "Carhartt Men's Knit Camo Beanie",
+    "id": 8,
+    "shelf": "",
+    "weight": 8,
+    "price": 771
+  },
+  {
+    "name": "Pampers Sensitive Water Based Hypoallergenic and Unscented Baby Wipes",
+    "id": 9,
+    "shelf": "",
+    "weight": 15,
+    "price": 167
+  },
+  {
+    "name": "Chuckit! Ultra Ball Dog Toy",
+    "id": 10,
+    "shelf": "",
+    "weight": 2,
+    "price": 365
+  },
+  {
+    "name": "Benebone Wishbone Durable Dog Chew Toy for Aggressive Chewers",
+    "id": 11,
+    "shelf": "",
+    "weight": 19,
+    "price": 520
+  },
+  {
+    "name": "PlayStation DuelSense Wireless Controller",
+    "id": 12,
+    "shelf": "",
+    "weight": 5,
+    "price": 599
+  },
+  {
+    "name": "Stanley Quencher H2.0",
+    "id": 13,
+    "shelf": "",
+    "weight": 2,
+    "price": 339
+  },
+  {
+    "name": "Mighty Patch",
+    "id": 14,
+    "shelf": "",
+    "weight": 12,
+    "price": 245
+  },
+  {
+    "name": "Fourth Wing by Rebecca Yarros",
+    "id": 15,
+    "shelf": "",
+    "weight": 3,
+    "price": 431
+  },
+  {
+    "name": "Blink Outdoor (3rd Gen)",
+    "id": 16,
+    "shelf": "",
+    "weight": 9,
+    "price": 457
+  },
+  {
+    "name": "Occer Compact Binoculars",
+    "id": 17,
+    "shelf": "",
+    "weight": 19,
+    "price": 16
+  },
+  {
+    "name": "Hanes Men's Ecosmart Hoodie",
+    "id": 18,
+    "shelf": "",
+    "weight": 15,
+    "price": 788
+  },
+  {
+    "name": "Apple AirTag",
+    "id": 19,
+    "shelf": "",
+    "weight": 13,
+    "price": 100
+  },
+  {
+    "name": "TERRO T300B Liquid Ant Killer",
+    "id": 20,
+    "shelf": "",
+    "weight": 18,
+    "price": 58
+  },
+  {
+    "name": "Purina Fancy Feast Gravy Lovers",
+    "id": 21,
+    "shelf": "",
+    "weight": 12,
+    "price": 30
+  },
+  {
+    "name": "Pokemon Cards",
+    "id": 22,
+    "shelf": "",
+    "weight": 14,
+    "price": 472
+  },
+  {
+    "name": "Hasbro Gaming Perfection Game",
+    "id": 23,
+    "shelf": "",
+    "weight": 19,
+    "price": 173
+  },
+  {
+    "name": "Xbox Gift Card",
+    "id": 24,
+    "shelf": "",
+    "weight": 4,
+    "price": 770
+  }
+]
