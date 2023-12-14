@@ -25,9 +25,6 @@ workerRouter.get("/query", ({ query }) => {
             case "occupation":
                 ret = ret.filter(worker => worker.occupation == query[q]);
                 break;
-            case "warehouseConnections":
-                ret = ret.filter(worker => worker.warehouseConnections == Number(query[q]));
-                break;
             case "id":
                 ret = ret.filter(worker => worker.id == Number(query[q]));
                 break;
