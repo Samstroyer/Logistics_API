@@ -19,7 +19,7 @@ export const workerSchema = new Schema({
     isBusy: { type: Boolean, default: false },
 });
 
-export const itemScheme = new Schema({
+export const itemSchema = new Schema({
     name: String,
     id: Number,
     parentShelf: { type: Types.ObjectId, require: true },

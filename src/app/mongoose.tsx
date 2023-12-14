@@ -1,13 +1,22 @@
 import { Elysia } from "elysia";
 import { html } from "@elysiajs/html";
 import { ConnectionStates, Mongoose } from "mongoose";
+import { itemSchema, shelfSchema, warehouseSchema, workerSchema } from "./models/schemas";
 
 // Create the Mongoose
 const mongoose = new Mongoose();
 
 // Connect to the atlas database
-// mongoose.connect(`mongodb+srv://${Bun.env.MONGOOSE_USERNAME}:${Bun.env.MONGOOSE_PASSWORD}@logistiksystem.lfygxwj.mongodb.net/My_Company?retryWrites=true&w=majority`).
-//     then(() => console.log("connected!"));
+mongoose.connect(`mongodb+srv://${Bun.env.MONGOOSE_USERNAME}:${Bun.env.MONGOOSE_PASSWORD}@logistiksystem.lfygxwj.mongodb.net/My_Company?retryWrites=true&w=majority`).
+    then(() => console.log("connected!")).
+    then(() => {
+        mongoose.model("Worker", workerSchema);
+        mongoose.model("Item", itemSchema);
+        mongoose.model("Shelf", shelfSchema);
+        mongoose.model("Warehouse", warehouseSchema);
+    }).
+    then(() => console.log("Created all schemas to models!"));
+
 
 const state_info = {
     0: ["disconnected", "gray"],
@@ -18,7 +27,7 @@ const state_info = {
 };
 
 function getStyle(state: ConnectionStates) {
-    return `h3 { color: ${state_info[state][1]} }`;
+    return ``;
 }
 
 export const connectionRouter = new Elysia();
@@ -38,15 +47,20 @@ connectionRouter.get("/", () => (
 connectionRouter.get("/status", () => (
     <html>
         <head>
-            <style>{getStyle(mongoose.connection.readyState)}</style>
         </head>
         <body>
             <h2>
                 <b>Mongoose connection status:</b>
             </h2>
-            <h3>
+            <h3 style={{
+                color: state_info[mongoose.connection.readyState][1],
+            }}>
                 <u>{state_info[mongoose.connection.readyState][0]}</u>
             </h3>
         </body>
-    </html>
+    </html >
 ));
+
+connectionRouter.get("/push_data", () => {
+    // Push all the data
+});

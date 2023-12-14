@@ -12,7 +12,7 @@ workerRouter.get("/all", () => workers);
 // To query by params
 workerRouter.get("/query", ({ query }) => {
     if (Object.entries(query).length === 0) {
-        return "No parameter gives!\nGo to /workers/useableParams for info!"
+        return "No parameter given!\nGo to /workers/useableParams for info!"
     }
 
     // Filter by all the queries
