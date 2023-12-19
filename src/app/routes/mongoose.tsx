@@ -1,8 +1,6 @@
 import { Elysia } from "elysia";
 import { html } from "@elysiajs/html";
 import mongoose, { Mongoose } from "mongoose";
-import { workerModel, itemModel, orderModel, warehouseModel } from "./models/models"
-import { Item } from "../generator/classes";
 
 // Connect to the atlas database
 mongoose.connect(`mongodb+srv://${Bun.env.MONGOOSE_USERNAME}:${Bun.env.MONGOOSE_PASSWORD}@logistiksystem.lfygxwj.mongodb.net/My_Company?retryWrites=true&w=majority`).
@@ -22,29 +20,27 @@ connectionRouter.use(html());
 connectionRouter.get("/", () => (
     <html>
         <head></head>
-        <h2> I use Mongoose! </h2>
-        <h3>
-            To connect to the database, me: Samuel, uses Mongoose. <br /> <br />...As the rest of the class does.
-        </h3>
+        <h2> I use Mongodb Atlas! </h2>
     </html>
 ));
 
-connectionRouter.get("/status", () => (
-    <html>
-        <head>
-        </head>
-        <body>
-            <h2>
-                <b>Mongoose connection status:</b>
-            </h2>
-            <h3 style={{
-                color: state_info[mongoose.connection.readyState][1],
-            }}>
-                <u>{state_info[mongoose.connection.readyState][0]}</u>
-            </h3>
-        </body>
-    </html >
-));
+connectionRouter.get("/status", () => {
+    const status = mongoose.connection.readyState;
+    return (
+        <html>
+            <head>
+            </head>
+            <body>
+                <h2>
+                    <b>Mongoose connection status:</b>
+                </h2>
+                <h3 style={{ color: state_info[status][1] }}>
+                    <u>{state_info[status][0]}</u>
+                </h3>
+            </body>
+        </html >
+    )
+});
 
 connectionRouter.get("/push_data", async () => {
     // This should only be done once, but I want access to this endpoint

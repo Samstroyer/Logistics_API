@@ -1,21 +1,19 @@
 {
   "name": "bunfirstapp",
   "module": "index.ts",
-  "type": "module",
-  "scripts": {
-    "watch": "bun --watch ./src/app/index.ts",
-    "generate_test_data": "bun run ./src/generator/generate.js"
-  },
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
   "dependencies": {
+    "@elysiajs/cors": "^0.7.2",
     "@elysiajs/html": "^0.7.3",
     "@elysiajs/static": "^0.7.1",
     "elysia": "^0.7.29",
     "mongoose": "^8.0.1"
-  }
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "scripts": {
+    "dev": "bun --watch ./src/app/index.tsx",
+    "generate_test_data": "bun run ./src/generator/generate.js"
+  },
+  "type": "module"
 }
