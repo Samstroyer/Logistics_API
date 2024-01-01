@@ -4,6 +4,8 @@ import { connectionRouter } from "./routes/mongoose";
 import { html } from "@elysiajs/html";
 import { cors } from "@elysiajs/cors";
 import { staticPlugin } from "@elysiajs/static";
+import { warehouseRouter } from "./routes/warehouse";
+import { orderRouter } from "./routes/orders";
 
 const app = new Elysia();
 
@@ -20,7 +22,7 @@ app.group("v1", server =>
                 </head>
                 <body>
                     <h1>Welcome to the landing page of this site!</h1>
-                    <p style="font-size:x-large">Read this projects <a href="https://github.com/Samstroyer/Logistics_API/blob/master/README.md">README</a> file on my <a href="https://github.com/Samstroyer/">GitHub</a> to see how to use this site</p>
+                    <p style="font-size:x-large">Read this projects <a href="https://github.com/Samstroyer/Logistics_API/blob/master/README.md">README</a> file on my <a href="https://github.com/Samstroyer/">GitHub</a> to see how to use this REST API</p>
 
                     <br /><br />
 
@@ -28,12 +30,15 @@ app.group("v1", server =>
                 </body>
             </html>
         )
-
     })
         .group("workers", wRoute => wRoute
             .use(workerRouter))
         .group("atlas", aRoute => aRoute
             .use(connectionRouter))
+        .group("warehouses", wRoute => wRoute
+            .use(warehouseRouter))
+        .group("orders", oRoute => oRoute
+            .use(orderRouter))
 )
 
 app.listen(8080);

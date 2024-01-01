@@ -2,7 +2,6 @@ import { Elysia } from "elysia"
 import { workerModel } from "../models/models";
 import { Html, html } from "@elysiajs/html";
 import { ObjectId } from "mongoose";
-import { isNotEmpty } from "elysia/handler";
 
 export const workerRouter = new Elysia();
 
@@ -99,6 +98,10 @@ type WorkerOneDay = {
     schedule: Schedule;
     _id?: ObjectId;
 }
+
+workerRouter.get("/occupation/:type", async ({ params: { type } }) => {
+    return workerModel.find({ occupation: type }).exec();
+})
 
 workerRouter.get("/available/:time", async ({ params: { time: wantedTime }, query: { day: dayOverload }, set }) => {
     const myDate = new Date();
