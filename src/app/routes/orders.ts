@@ -214,7 +214,7 @@ orderRouter.get("/logistical/:time_sort/:status", async ({ params: { time_sort, 
     switch (wanted_sort) {
         case "old":
             {
-                
+
                 return {};
             }
         case "new":
@@ -222,8 +222,6 @@ orderRouter.get("/logistical/:time_sort/:status", async ({ params: { time_sort, 
                 return {};
             }
     }
-
-
 
     return { orders: allOrders };
 });

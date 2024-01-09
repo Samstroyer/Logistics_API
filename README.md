@@ -24,8 +24,8 @@ This API serves my imaginary workers, warehouses, orders and items.\
 Below are all the endpoints:
 
 ### Workers:
-|Base|Params|Description|
-|:---|:-----|:----------|
+|Base|Endpoint|Description|
+|:---|:-------|:----------|
 |*/v1/workers|/|Gives all the workers| 
 |*/v1/workers|/all|Gives all the workers| 
 |*/v1/workers|/:name|Gives all the workers with that name| 
@@ -45,8 +45,8 @@ Values for each parameter:
 
 ### Orders:
 
-|Base|Params|Description|
-|:---|:-----|:----------|
+|Base|Endpoint|Description|
+|:---|:-------|:----------|
 |*/v1/orders|/|Gives all the orders| 
 |*/v1/orders|/all|Gives all the orders|
 |*/v1/orders|/total/:month|Gives the money for selected month
@@ -58,10 +58,15 @@ Values for each parameter:
 - Sorting parameter can be satisfied with "highest", "high", "lowest", "low", "avg" or "average".
 - Time_sort parameter can be satisfied with "oldest", "old", "newest" or "new".
 
+Notes:\
 For the endpoint: "*/v1/orders/total/:month" it is possible to query in what currency with ?currency=WANTED. WANTED can be sek (default), dollar, euro, rubel or robux.
 
 ### Warehouses:
-* To be implemented!
+
+|Base|Endpoint|Description|
+|:---|:-------|:----------|
+|*/v1/warehouses|/items|Gives all items ever| 
+|*/v1/warehouses|/items/:warehouses|Gives all the items for selected warehouse| 
 
 ### Items:
 To be implemented!
