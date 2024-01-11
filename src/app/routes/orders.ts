@@ -73,7 +73,7 @@ const currency_map = new Map()
 
 orderRouter.get("/total/:month/", async ({ params: { month }, query: { currency } }) => {
     if (!month_map.has(month)) {
-        return {};
+        return { orders: {} };
     }
 
     let wantedCurrency = "sek";

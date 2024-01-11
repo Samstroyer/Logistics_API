@@ -117,7 +117,7 @@ workerRouter.get("/available/:time", async ({ params: { time: wantedTime }, quer
     }
 
     if (dayToday <= 0 || dayToday > 5) {
-        return {};
+        return { workers: {} };
     }
 
     // Get all workers schedule, so array of schedules for selected day
@@ -154,7 +154,7 @@ workerRouter.get("/available/:time", async ({ params: { time: wantedTime }, quer
         return { id: ww.id, _id: ww._id, name: ww.name, occupation: ww.occupation, schedule: ww.schedule[dayToday - 1] }
     });
 
-    return workers;
+    return { workers: workers };
 });
 
 workerRouter.get("/available/days/", async () => {
@@ -192,7 +192,7 @@ workerRouter.get("/available/day/:day", async ({ params: { day } }) => {
         }
     }));
 
-    return retObj;
+    return { workers: retObj };
 });
 
 workerRouter.get("/available/quarters", async () => {
@@ -211,5 +211,5 @@ workerRouter.get("/available/quarter/:quarter", async ({ params: { quarter: want
 
     const quarter: Quarter = Object.values(quarters)[Number(wantedQuarter) - 1];
 
-    return quarter;
+    return { workers: quarter };
 });
